@@ -15,6 +15,8 @@ body{
 
 /* GRIDS ESTRUCTURA */
 
+
+
 .contenedorBody{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -48,10 +50,20 @@ header{
     border-radius: 20px;
     width: 80%;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);
+    /* transition: box-shadow 0.5s; */
+    animation-name: latido_logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
-.header_logo_img:hover{
+/* .header_logo_img:hover{
     box-shadow: 0px 0px 20px 10px #597e53db;
+} */
+
+@keyframes latido_logo{
+    0%   {box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);}
+    50%  {box-shadow: 0px 0px 20px 10px #597e53db;}
+    100% {box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);}
 }
 
 .header__barraMenu{
@@ -75,6 +87,7 @@ header{
     text-decoration: none;
     letter-spacing: 1px;
     padding: 10px;
+    transition: color 0.5s;
 }
 
 .barraMenu__lista a:hover{
@@ -197,16 +210,22 @@ main{
 
 .section__tableGaleria{
     border: 0px;
-    padding: 50px 50px;
+    padding: 40px 40px;
     text-align: center;
 }
 
 .section__tableGaleria__img{
-    width: 70%;
+    width: 60%;
     box-shadow: 1px 1px 10px black;
     border: 4px double #111c10d6;
     border-radius: 10px;
     margin: 5px;
+    transition: box-shadow 0.5s, width 0.5s;
+}
+
+.section__tableGaleria__img:hover{
+    box-shadow: 0px 0px 20px 10px #597e53db;
+    width: 70%;
 }
 
 .form__input--text{
@@ -313,6 +332,7 @@ footer{
         font-size: 0.8rem;
         font-weight: bold;
         padding: 0px 30px;
+        letter-spacing: 0.4px;
     }
 
     .footer__logo{
@@ -492,6 +512,7 @@ footer{
         font-size: 0.65rem;
         font-weight: bold;
         padding: 0px 10px;
+        letter-spacing: 0.4px;
     }
 
     .footer__logo{
@@ -545,6 +566,9 @@ footer{
         width: 100%;
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);
         margin: -5px 0px;
+        animation-name: latido_logo;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
     }
 
     .barraMenu__lista li{
@@ -728,6 +752,7 @@ footer{
         font-weight: bold;
         padding: 0px 10px;
         text-align: center;
+        letter-spacing: 0.4px;
     }
 
     .footer__logo{
