@@ -55,7 +55,7 @@ header{
 }
 
 .header__barraMenu{
-    background-color: rgba(19, 18, 18, 0.932);
+    background: linear-gradient(180deg, rgb(0 0 0 / 93%) 30%, rgb(33 52 31) 90%);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);
     flex-grow: 1;   
     border-radius: 10px;
@@ -255,12 +255,11 @@ main{
 footer{
     grid-area: footer;
     
-    border-top: 2px dotted black;
-    background-color: #597e53db;
+    background: linear-gradient(180deg, rgb(84 121 80), rgb(84 131 82) 45%, rgb(52 86 49));
     margin: 0px 40px;
-    border-bottom: 2px dotted black;
     box-shadow: 1px 1px 10px 1px black;
-    
+    opacity: 90%; 
+
     display: flex;
     justify-content: space-between;
     align-items: center;
