@@ -120,7 +120,7 @@ main{
     grid-area: main;
     background-color: whitesmoke;
     margin: 40px;
-    padding: 10px 0px;
+    padding-top: 20px;
     box-shadow: 0px 0px 15px 5px black;
 }
 
@@ -354,6 +354,19 @@ footer{
         display: none;
     }
 
+    .carousel__img--mobile{
+        display: none !important;
+    }
+
+    .carousel__leyenda{
+        text-shadow: 0px 0px 15px black;;
+    }
+
+    .carousel__boton{
+        background: linear-gradient(180deg, rgb(0 0 0 / 93%) 30%, rgb(33 52 31) 90%);
+        opacity: 80%;
+        box-shadow: 1px 1px 10px black;
+    }
 
     /* FOOTER */
 
@@ -394,7 +407,7 @@ footer{
     }
 
     .section__text--center{
-        padding: 15px 30px;
+        padding: 25px 30px;
         text-align: center;
         font-size: 0.9rem;
         letter-spacing: 0.5px;
@@ -591,6 +604,25 @@ footer{
         font-style: italic;
     }
 
+    .carousel__leyenda{
+        text-shadow: 0px 0px 5px black;
+        font-size: 0.9rem;
+    }
+
+    .carousel__boton{
+        font-size: 0.8rem !important;
+        background: linear-gradient(180deg, rgb(0 0 0 / 93%) 30%, rgb(33 52 31) 90%);
+        opacity: 80%;
+        box-shadow: 1px 1px 10px black;
+    }
+
+    .carousel__img--cover{
+        display: none !important;
+    }
+    
+    .carousel__img--mobile{
+        display: flexbox;
+    }
 
     /* FOOTER */
 
@@ -643,6 +675,7 @@ footer{
         margin-right: 50px;
             margin-left: 35px;
         align-items: center;
+        z-index: 1;
     }
 
     .header__logo{
@@ -701,7 +734,7 @@ footer{
     .menuburger{
         display: inline !important;
         position: fixed !important;
-        top: 2%;
+        top: 3%;
         right: 4.5%;
     }
 
@@ -732,7 +765,7 @@ footer{
     .flechaArriba__button{
         display: inline !important;
         position: fixed !important;
-        top: 2%;
+        top: 3%;
         left: 4.5%;
         box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.884);
     }
@@ -747,8 +780,9 @@ footer{
         grid-area: main;
         background-color: whitesmoke;
         margin: 40px 20px;
-        padding: 10px 0px;
+        padding-top: 20px;
         box-shadow: 0px 0px 15px 5px black;
+        z-index: 0;
     }
 
     .main__titulo{
@@ -802,7 +836,7 @@ footer{
     }
 
     .section__text--center{
-        padding: 5px 15px;
+        padding: 20px 15px;
         text-align: center;
         font-size: 0.8rem;
         letter-spacing: 0.5px;
@@ -821,6 +855,14 @@ footer{
         display: flex;
         flex-flow: column;
         align-items: center;
+    }
+
+    .section__text--leyenda{
+        padding: 0px 50px;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.3rem;
+        font-style: italic;
     }
 
     .section__article__foto{
@@ -876,14 +918,7 @@ footer{
         margin: 0% 30%;
     }
 
-    .section__text--leyenda{
-        padding: 0px 50px;
-        text-align: center;
-        font-size: 1rem;
-        line-height: 1.3rem;
-        font-style: italic;
-    }
-
+    
     .form__input--text{
         width: 100%;
         padding: 5px;
@@ -894,6 +929,27 @@ footer{
 
     .form__input--text:focus{
         box-shadow: 0px 0px 20px 10px #597e53db;
+    }
+
+    .carousel__leyenda{
+        text-shadow: 0px 0px 5px black;
+        font-size: 0.9rem;
+        display: none !important;
+    }
+
+    .carousel__boton{
+        font-size: 0.8rem !important;
+        background: linear-gradient(180deg, rgb(0 0 0 / 93%) 30%, rgb(33 52 31) 90%);
+        opacity: 80%;
+        box-shadow: 1px 1px 10px black;
+    }
+
+    .carousel__img--cover{
+        display: none !important;
+    }
+    
+    .carousel__img--mobile{
+        display: flexbox;
     }
 
     /* FOOTER */
