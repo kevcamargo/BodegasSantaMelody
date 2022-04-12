@@ -716,6 +716,7 @@ footer{
 
     .menuburger__item{
         background-color: black !important;
+        opacity: 85%;
     }
     .menuburger__item li{
         text-align: center !important;
