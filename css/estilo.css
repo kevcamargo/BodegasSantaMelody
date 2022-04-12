@@ -729,6 +729,7 @@ footer{
     }
 
     .flechaArriba__button{
+        display: inline !important;
         position: fixed !important;
         top: 2%;
         left: 4.5%;
