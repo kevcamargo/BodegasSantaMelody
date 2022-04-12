@@ -1,7 +1,9 @@
 
 /* Dejare todo el sitio con la mismo tipografia y */
 
-body{
+/* He creado esta clase porque bootstrap me modifico la modifico la pagina */
+
+.bodySM{
     font-family: 'Barlow', sans-serif;
     background-color: lightgrey;
     background-image: url("../img/pattern4.jpg");
@@ -32,7 +34,9 @@ body{
 
 /* CLASES DENTRO DEL HEADER */
 
-header{
+/* He creado esta clase porque bootstrap me modifico la modifico la pagina */
+
+.headerSM{
     grid-area: header;
     color:lightgray;
     padding: 0px;
@@ -48,7 +52,7 @@ header{
     background-color: black;
     padding: 20px 20px;
     border-radius: 20px;
-    width: 80%;
+    width: 100%;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);
     /* transition: box-shadow 0.5s; */
     animation-name: latido_logo;
@@ -73,6 +77,7 @@ header{
     border-radius: 10px;
     padding-left: 10px;
     margin-left: -10px;
+    margin-top: 15px;
 }
 
 .barraMenu__lista{
@@ -80,6 +85,7 @@ header{
     display: flex;
     flex-flow: row nowrap;
     padding: 5px 10px;
+    margin: 10px;
 }
 
 .barraMenu__lista a{
@@ -99,6 +105,13 @@ header{
     color:#6bab66eb;
 }
 
+.menuburger{
+    display: none !important;
+}
+
+.flechaArriba__button{
+    display: none !important;
+}
 
 /* CLASES DENTRO DEL MAIN */
 
@@ -109,6 +122,11 @@ main{
     margin: 40px;
     padding: 10px 0px;
     box-shadow: 0px 0px 15px 5px black;
+}
+
+p{
+    margin-top: 5px !important;
+    margin-bottom: 0rem !important;
 }
 
 .main__subtitulo{
@@ -274,7 +292,6 @@ main{
     box-shadow: 0px 0px 20px 5px #597e53db;
 }
 
-
 /* CLASES DENTRO DEL FOOTER */
 
 
@@ -283,6 +300,7 @@ footer{
     
     background: linear-gradient(180deg, rgb(84 121 80), rgb(84 131 82) 45%, rgb(52 86 49));
     margin: 0px 40px;
+    padding: 10px;
     box-shadow: 1px 1px 10px 1px black;
     opacity: 90%; 
 
@@ -304,11 +322,22 @@ footer{
     .header__logo{
         width: 200px;
         position: relative;
+        top: 10px;
     }
 
     .barraMenu__lista li{
         font-size: 1rem;
         font-weight: bolder;
+    }
+
+    .header__barraMenu{
+        background: linear-gradient(180deg, rgb(0 0 0 / 93%) 30%, rgb(33 52 31) 90%);
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);
+        flex-grow: 1;   
+        border-radius: 10px;
+        padding-left: 10px;
+        margin-left: -10px;
+        margin-top: 15px;
     }
 
     /* MAIN */
@@ -422,7 +451,8 @@ footer{
         background-color: rgba(19, 18, 18, 0.932);
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);
         border-radius: 10px;
-        padding-left: 10px;
+        padding: 5px;
+        margin-top: 0px;
     }
 
     .barraMenu__lista a{
@@ -561,9 +591,6 @@ footer{
         font-style: italic;
     }
 
-    
-
-
 
     /* FOOTER */
 
@@ -600,16 +627,22 @@ footer{
 
 @media (max-width: 576px) {
 
+    .contenedorBody{
+        grid-template-rows: 70px 1fr 90px ;
+    }
+
     /* HEADER */
 
-    header{
+    .headerSM{
         grid-area: header;
         color:lightgray;
         padding: 0px;
         margin: 0px;
-        display: flex;     
-        flex-direction: row; 
-        justify-content: center;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-right: 50px;
+            margin-left: 35px;
+        align-items: center;
     }
 
     .header__logo{
@@ -630,6 +663,7 @@ footer{
         animation-name: latido_logo;
         animation-duration: 3s;
         animation-iteration-count: infinite;
+        box-sizing: initial;
     }
 
     .barraMenu__lista li{
@@ -641,12 +675,13 @@ footer{
         background-color: rgba(19, 18, 18, 0.932);
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);
         border-radius: 10px;
-        padding: 0px 10px;
+        padding: 0px 0px;
         margin-left: 0px;
         flex-grow: 0;
         position: relative;
-        top: 50%;
+        top: 70%;
         z-index: 0;
+        display: none;
     }
 
     .barraMenu__lista a{
@@ -661,6 +696,47 @@ footer{
         display: flex;
         flex-flow: row nowrap;
         padding: 0px 5px;
+    }
+
+    .menuburger{
+        display: inline !important;
+        position: fixed !important;
+        top: 2%;
+        right: 4.5%;
+    }
+
+    .menuburger__button{
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.884);
+    }
+
+    .menuburger__icon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .menuburger__item{
+        background-color: black !important;
+    }
+    .menuburger__item li{
+        text-align: center !important;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .menuburger__item--active{
+        color:#6bab66eb;
+        background: linear-gradient(180deg, rgb(0 0 0 / 93%) 30%, rgb(33 52 31) 90%);
+    }
+
+    .flechaArriba__button{
+        position: fixed !important;
+        top: 2%;
+        left: 4.5%;
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.884);
+    }
+
+    .flechaArriba__button a{
+        color: white !important;
     }
 
     /* MAIN */
@@ -838,9 +914,9 @@ footer{
     .footer__text{
         font-size: 0.65rem;
         font-weight: bold;
-        padding: 0px 10px;
         text-align: center;
         letter-spacing: 0.4px;
+        padding: 5px;
     }
 
     .footer__logo{
@@ -853,8 +929,9 @@ footer{
 
     .footer__redSocial img{
         width: 30px;
-        margin: 2px 10px;
+        margin: 5px 5px;
         border-radius: 10px;
+        padding: 2px;
     }
 
 }
