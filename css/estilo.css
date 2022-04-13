@@ -183,9 +183,7 @@ p{
 
 .section__text--leyenda{
     padding: 0px 50px;
-    text-align: center;
     font-size: 1.2rem;
-    line-height: 0.24rem;
     font-style: italic;
 }
 
@@ -205,18 +203,17 @@ p{
 }
 
 .section__article__foto{
-    margin: 0px 25%;
     text-align: center;
     padding: 15px 0px;
 }
 
 .section__article__foto__img{
-    width: 80%;
+    width: 50%;
     box-shadow: 1px 1px 10px black;
 }
 
 .section__article__foto__img--mini{
-    width: 40%;
+    width: 80%;
     box-shadow: 1px 1px 10px black;
 }
 
@@ -292,6 +289,17 @@ p{
     box-shadow: 0px 0px 20px 5px #597e53db;
 }
 
+.section__titulo__card{
+    box-shadow: 0px 0px 10px 0px #326231;
+    background-color: #a4c4a2e6 !important;
+}
+
+.section__text--leyenda{
+    padding: 0px 50px;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
 /* CLASES DENTRO DEL FOOTER */
 
 
@@ -359,7 +367,7 @@ footer{
     }
 
     .carousel__leyenda{
-        text-shadow: 0px 0px 15px black;;
+        text-shadow: 0px 0px 5px black;;
     }
 
     .carousel__boton{
@@ -409,8 +417,10 @@ footer{
     .section__text--center{
         padding: 25px 30px;
         text-align: center;
-        font-size: 0.9rem;
         letter-spacing: 0.5px;
+        font-size: 1.25rem;
+        font-weight: 300;
+
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
@@ -562,7 +572,7 @@ footer{
     }
 
     .section__article__foto__img{
-        width: 100%;
+        width: 70%;
         box-shadow: 1px 1px 10px black;
     }
 
