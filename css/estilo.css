@@ -11,13 +11,11 @@
 }
 
 .reset{
-    padding: 0px;
-    margin: 0px;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 /* GRIDS ESTRUCTURA */
-
-
 
 .contenedorBody{
     display: grid;
@@ -298,6 +296,7 @@ p{
     padding: 0px 50px;
     font-size: 1.2rem;
     font-style: italic;
+    text-align: center;
 }
 
 /* CLASES DENTRO DEL FOOTER */
@@ -374,6 +373,10 @@ footer{
         background: linear-gradient(180deg, rgb(0 0 0 / 93%) 30%, rgb(33 52 31) 90%);
         opacity: 80%;
         box-shadow: 1px 1px 10px black;
+    }
+
+    .carousel_mobile{
+        display: none;
     }
 
     /* FOOTER */
@@ -632,6 +635,10 @@ footer{
     
     .carousel__img--mobile{
         display: flexbox;
+    }
+
+    .carousel_mobile{
+        display: none;
     }
 
     /* FOOTER */
@@ -895,6 +902,7 @@ footer{
         border: 0px;
         padding: 10px 5px;
         text-align: center;
+        display: none;
     }
     
     .section__tableGaleria__img{

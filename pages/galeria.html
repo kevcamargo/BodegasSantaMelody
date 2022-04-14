@@ -77,25 +77,203 @@
             <!-- Contenido o resto de la pagina -->  
             <section>
 
+                <!-- Carousel exclusivo para moviles -->
+                <div id="carouselExampleIndicators" class="carousel slide carousel_mobile" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../img/latas_vinos_melody.jpg" class="d-block w-100" alt="imagen1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/cover_conocenos3.jpg" class="d-block w-100" alt="imagen2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/img_conocenos_actualidad.jpg" class="d-block w-100" alt="imagen3">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/picnic-santa_melody.jpg" class="d-block w-100" alt="imagen4">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/cover_conocenos.jpg" class="d-block w-100" alt="imagen5">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/señor_con_uvas.jpg" class="d-block w-100" alt="imagen6">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/señor_con_uvas2.jpg" class="d-block w-100" alt="imagen7">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/uvas.jpg" class="d-block w-100" alt="imagen8">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/uvas2.jpg" class="d-block w-100" alt="imagen9">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                <!-- Tabla Galeria -->
                 <table class="section__tableGaleria">
     
-                    <th><a href="../img/latas_vinos_melody.jpg" target="_blank"><img class="section__tableGaleria__img" src="../img/latas_vinos_melody.jpg" alt="imagen1"></a></th>
-                    <th><a href="../img/cover_conocenos2.jpg" target="_blank"><img class="section__tableGaleria__img" src="../img/cover_conocenos2.jpg" alt="imagen2"></a></th>
-                    <th><a href="../img/img_conocenos_actualidad.jpg" target="_blank"><img class="section__tableGaleria__img" src="../img/img_conocenos_actualidad.jpg" alt="imagen3"></a></th>
+                    <th><a href="#" data-bs-toggle="modal" data-bs-target="#imagen1"><img class="section__tableGaleria__img" src="../img/latas_vinos_melody.jpg" alt="imagen1"></a></th>
+                    <th><a href="#" data-bs-toggle="modal" data-bs-target="#imagen2"><img class="section__tableGaleria__img" src="../img/cover_conocenos3.jpg" alt="imagen2"></a></th>
+                    <th><a href="#" data-bs-toggle="modal" data-bs-target="#imagen3"><img class="section__tableGaleria__img" src="../img/img_conocenos_actualidad.jpg" alt="imagen3"></a></th>
     
                     <tr>
-                        <td><a href="../img/picnic-santa_melody.jpg" target="_blank"><img class="section__tableGaleria__img" src="../img/picnic-santa_melody.jpg" alt="imagen4"></a></td>
-                        <td><a href="../img/cover_conocenos.jpg" target="_blank"><img class="section__tableGaleria__img" src="../img/cover_conocenos.jpg" alt="imagen5"></a></td>
-                        <td><a href="../img/señor_con_uvas.jpg" target="_blank"><img class="section__tableGaleria__img" src="../img/señor_con_uvas.jpg" alt="imagen6"></a></td>
+                        <td><a href="#" data-bs-toggle="modal" data-bs-target="#imagen4"><img class="section__tableGaleria__img" src="../img/picnic-santa_melody.jpg" alt="imagen4"></a></td>
+                        <td><a href="#" data-bs-toggle="modal" data-bs-target="#imagen5"><img class="section__tableGaleria__img" src="../img/cover_conocenos.jpg" alt="imagen5"></a></td>
+                        <td><a href="#" data-bs-toggle="modal" data-bs-target="#imagen6"><img class="section__tableGaleria__img" src="../img/señor_con_uvas.jpg" alt="imagen6"></a></td>
                     </tr>
     
                     <tr>
-                        <td><a href="../img/señor_con_uvas2.jpg" target="_blank"><img class="section__tableGaleria__img"  src="../img/señor_con_uvas2.jpg" alt="imagen7"></a></td>
-                        <td><a href="../img/uvas.jpg" target="_blank"><img class="section__tableGaleria__img"  src="../img/uvas.jpg" alt="imagen8"></a></td>
-                        <td><a href="../img/uvas2.jpg" target="_blank"><img class="section__tableGaleria__img"  src="../img/uvas2.jpg" alt="imagen9"></a></td>
+                        <td><a href="#" data-bs-toggle="modal" data-bs-target="#imagen7"><img class="section__tableGaleria__img"  src="../img/señor_con_uvas2.jpg" alt="imagen7"></a></td>
+                        <td><a href="#" data-bs-toggle="modal" data-bs-target="#imagen8"><img class="section__tableGaleria__img"  src="../img/uvas.jpg" alt="imagen8"></a></td>
+                        <td><a href="#" data-bs-toggle="modal" data-bs-target="#imagen9"><img class="section__tableGaleria__img"  src="../img/uvas2.jpg" alt="imagen9"></a></td>
                     </tr>
                 </table>
-                
+
+                <!-- Modal imagen1 -->
+                <div class="modal fade" id="imagen1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/latas_vinos_melody.jpg" alt="imagen1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal imagen2 -->
+                <div class="modal fade" id="imagen2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/cover_conocenos3.jpg" alt="imagen2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal imagen3 -->
+                <div class="modal fade" id="imagen3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/img_conocenos_actualidad.jpg" alt="imagen3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal imagen4 -->
+                <div class="modal fade" id="imagen4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/picnic-santa_melody.jpg" alt="imagen4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal imagen5 -->
+                <div class="modal fade" id="imagen5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/cover_conocenos.jpg" alt="imagen5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal imagen6 -->
+                <div class="modal fade" id="imagen6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/señor_con_uvas.jpg" alt="imagen6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal imagen7 -->
+                <div class="modal fade" id="imagen7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/señor_con_uvas2.jpg" alt="imagen7">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal imagen8 -->
+                <div class="modal fade" id="imagen8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/uvas.jpg" alt="imagen8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Modal imagen9 -->
+                <div class="modal fade" id="imagen9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body reset">
+                                <img class="w-100" src="../img/uvas2.jpg" alt="imagen9">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </main> 
     
