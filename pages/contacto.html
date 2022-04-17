@@ -77,15 +77,18 @@
         <main>
             <!-- Titulo de la pagina -->
             <h1 data-aos="zoom-out" data-aos-duration="800" class="main__titulo">Contacto</h1>
+            <img class="section__cover__img" src="../img/cover_contacto3.jpeg" alt="cover_contacto">
             <!-- Contenido o resto de la pagina -->  
-            <section class="section__article--sinBorde">
-                <!-- Cover de la pagina -->
-                <div class="section__cover">
-                    <img class="section__cover__img--marco" src="../img/cover_contacto.jpg" alt="cover_contacto">
+            <section class="section__article--sinBorde reset">
+                <h2 class="section__title--center py-4">¿Tienes alguna duda o consulta?</h2>
+
+                <div class="card text-dark bg-light col-lg-12">
+                    <div class="card-header section__titulo__card text-center">
+                        <h3 class="section__title reset">📝 ¡Contactanos! 📝</h3>
+                    </div>
                 </div>
-    
-                <h2 class="section__title--center">¿Tienes dudas o consultas? ¡Contactanos!</h2>
-                <form class="section__article">
+
+                <form class="section__article border-0 px-4">
                     <!--
                         AVISO! 
                         Veran muchos h5 por aqui. Entiendo que se usa solo para encabezados. En este caso lo use por cuestion de que quede bien el sitio, visualmente hablando. En un futuro cuando sepa mas de css, estos h5 desapareceran :)
@@ -101,21 +104,60 @@
                     </h5>
     
                     <h5 class="section__text--center"><label for="tipo_consulta">¿A que área deseas contactar?</label></h5>
+
                     <div class="form__input--radio">
-                        <input type="radio" value="atencion" name="tipo_consulta">Atencion al cliente
-                        <input type="radio" value="ventas" name="tipo_consulta">Ventas
-                        <input type="radio" value="marketing" name="tipo_consulta">Marketing
-                        <input type="radio" value="reclamos" name="tipo_consulta">Reclamos
-                        <input type="radio" value="no_especifica" name="tipo_consulta">Sin especificar
-                    </div>
-                    <div class="form__input--radio--mini">
-                        <input type="radio" value="atencion" name="tipo_consulta">Atencion al cliente<br>
-                        <input type="radio" value="ventas" name="tipo_consulta">Ventas<br>
-                        <input type="radio" value="marketing" name="tipo_consulta">Marketing<br>
-                        <input type="radio" value="reclamos" name="tipo_consulta">Reclamos<br>
-                        <input type="radio" value="no_especifica" name="tipo_consulta">Sin especificar<br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="atencion">
+                            <label class="form-check-label" for="tipo_consulta">Atencion al cliente</label>
+                        </div>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="ventas">
+                            <label class="form-check-label" for="tipo_consulta">Ventas</label>
+                        </div>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="marketing">
+                            <label class="form-check-label" for="tipo_consulta">Marketing</label>
+                        </div>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="reclamos">
+                            <label class="form-check-label" for="tipo_consulta">Reclamos</label>
+                        </div>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="no_especifica">
+                            <label class="form-check-label" for="tipo_consulta">Sin especificar</label>
+                        </div>
                     </div>
 
+                    <div class="form__input--radio--mini">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="atencion">
+                            <label class="form-check-label" for="tipo_consulta">Atencion al cliente</label>
+                        </div>
+    
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="ventas">
+                            <label class="form-check-label" for="tipo_consulta">Ventas</label>
+                        </div>
+    
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="marketing">
+                            <label class="form-check-label" for="tipo_consulta">Marketing</label>
+                        </div>
+    
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="reclamos">
+                            <label class="form-check-label" for="tipo_consulta">Reclamos</label>
+                        </div>
+    
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipo_consulta" value="no_especifica">
+                            <label class="form-check-label" for="tipo_consulta">Sin especificar</label>
+                        </div>
+                    </div>
 
                     <h5 class="section__text--centercolumn">
                         <p><label for="mensaje">Escribe tu duda o consulta:</label></p>
@@ -127,27 +169,39 @@
                     </h5>
     
                     <h5 class="section__text--centernoflex">
-                        <input class="form__input--button" type="submit" value="Enviar">
-                        <input class="form__input--button" type="reset" value="Borrar"> 
+                        <input class="form__input--button btn-success opacity-50" type="submit" value="Enviar">
+                        <input class="form__input--button btn-success opacity-50" type="reset" value="Borrar"> 
                     </h5>
                 </form>
+
                 <!-- Visitanos -->
-                <article class="section__article">
-    
-                    <h2 class="main__titulo">¡ Visitanos !</h2>
+                <div class="card text-dark bg-light col-lg-12">
+                    <div class="card-header section__titulo__card text-center">
+                        <h3 class="section__title reset">🗺 ¡Visitanos! 🗺 </h3>
+                    </div>
+                </div>
+
+                <article class="section__article border-0">
+                    <div class="section__article__foto text-center">
+                        <img data-aos="zoom-in" class="img-fluid w-50" src="../img/logo_santa_melody_black.png" alt="logo_santa_melody_black">
+                    </div>
                     <h3 class="main__subtitulo">Bodegas Santa Melody</h3>
                     <p class="section__text--leyenda">Ruta Provincial 33, Km 7,5 (M5531) Maipú, Mendoza</p>
-                    <p class="section__text--leyenda">Tel. (54) 261 4410000</p>
+                    <p class="section__text--leyenda py-2">Tel. (54) 261 4410000</p>
     
-                    <iframe class="iframe_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.28905478043!2d-68.56890338415758!3d-32.969774880914024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e6ad12ca2130d%3A0xefbcbef017c4b32b!2sBodega%20Santa%20Julia!5e0!3m2!1ses!2sus!4v1647124962211!5m2!1ses!2sus" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="iframe_map reset" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.28905478043!2d-68.56890338415758!3d-32.969774880914024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e6ad12ca2130d%3A0xefbcbef017c4b32b!2sBodega%20Santa%20Julia!5e0!3m2!1ses!2sus!4v1647124962211!5m2!1ses!2sus" allowfullscreen="" loading="lazy"></iframe>
     
                 </article>
     
-                <article class="section__article--sinBorde">
-    
-                    <h2 class="main__titulo">¿Deseas reservar tu visita a la bodega?</h2>
-                    <p class="section__text--leyenda">✉ Puedes contactarnos a traves de este mail ✉</p>
-                    <h4 class="main__subtitulo">reservas@santamelody.com.ar</h4>
+                <article class="section__article--sinBorde reset py-3">
+                    <!-- Reserva tu visita -->
+                    <div class="card text-dark bg-light col-lg-12">
+                        <div class="card-header section__titulo__card text-center">
+                            <h3 class="section__title reset">✨ ¡Reserva tu visita a nuestra bodega! ✨ </h3>
+                        </div>
+                    </div>
+                    <p class="section__text--leyenda">Nos pueden contactar a traves de este mail: </p>
+                    <h4 class="main__subtitulo"><a class="text-success" href="mailto:reservas@santamelody.com.ar">reservas@santamelody.com.ar</a></h4>
     
                 </article>
     

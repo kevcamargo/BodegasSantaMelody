@@ -263,7 +263,7 @@ p{
 
 .iframe_map{
     width: 100%;
-    height: 400px;
+    height: 500px;
     padding: 50px 0px;
     text-align: center;
     border: 0px;
@@ -927,7 +927,7 @@ footer{
     .form__input--radio--mini{
         text-align: left;
         margin-top: -15px;
-        font-size: 0.7rem;
+        font-size: 1rem;
         margin: 0% 30%;
     }
 
