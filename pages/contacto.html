@@ -88,7 +88,7 @@
                     </div>
                 </div>
 
-                <form class="section__article border-0 px-4">
+                <form class="section__article border-0 px-2">
                     <!--
                         AVISO! 
                         Veran muchos h5 por aqui. Entiendo que se usa solo para encabezados. En este caso lo use por cuestion de que quede bien el sitio, visualmente hablando. En un futuro cuando sepa mas de css, estos h5 desapareceran :)
@@ -133,46 +133,52 @@
                     </div>
 
                     <div class="form__input--radio--mini">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipo_consulta" value="atencion">
-                            <label class="form-check-label" for="tipo_consulta">Atencion al cliente</label>
-                        </div>
-    
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipo_consulta" value="ventas">
-                            <label class="form-check-label" for="tipo_consulta">Ventas</label>
-                        </div>
-    
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipo_consulta" value="marketing">
-                            <label class="form-check-label" for="tipo_consulta">Marketing</label>
-                        </div>
-    
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipo_consulta" value="reclamos">
-                            <label class="form-check-label" for="tipo_consulta">Reclamos</label>
-                        </div>
-    
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipo_consulta" value="no_especifica">
-                            <label class="form-check-label" for="tipo_consulta">Sin especificar</label>
+                        <div class="col-6 mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo_consulta" value="atencion">
+                                <label class="form-check-label" for="tipo_consulta">Atencion al cliente</label>
+                            </div>
+        
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo_consulta" value="ventas">
+                                <label class="form-check-label" for="tipo_consulta">Ventas</label>
+                            </div>
+        
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo_consulta" value="marketing">
+                                <label class="form-check-label" for="tipo_consulta">Marketing</label>
+                            </div>
+        
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo_consulta" value="reclamos">
+                                <label class="form-check-label" for="tipo_consulta">Reclamos</label>
+                            </div>
+        
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo_consulta" value="no_especifica">
+                                <label class="form-check-label" for="tipo_consulta">Sin especificar</label>
+                            </div>
                         </div>
                     </div>
 
                     <h5 class="section__text--centercolumn">
-                        <p><label for="mensaje">Escribe tu duda o consulta:</label></p>
+                        <p class="section__text--center"><label for="mensaje">Escribe tu duda o consulta:</label></p>
                         <textarea class="section_textarea" name="mensaje" placeholder="Ingrese su mensaje"></textarea>
                     </h5>
-    
-                    <h5 class="section__text--centernoflex">
-                        <input type="checkbox" name="newsletter" value="1"> Acepto suscribirme a nuestro Newsletter de Santa Melody y quiero enterarme de todo antes que nadie!
+
+                    <h5 class="section__text--center">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" name="newsletter" id="newsletter" checked>
+                            <label class="form-check-label" for="newsletter"> Acepto suscribirme a nuestro Newsletter de Santa Melody y quiero enterarme de todo antes que nadie!</label>
+                        </div>
                     </h5>
     
                     <h5 class="section__text--centernoflex">
-                        <input class="form__input--button btn-success opacity-50" type="submit" value="Enviar">
-                        <input class="form__input--button btn-success opacity-50" type="reset" value="Borrar"> 
+                        <input class="form__input--button" type="submit" value="Enviar">
+                        <input class="form__input--button" type="reset" value="Borrar"> 
                     </h5>
                 </form>
+
 
                 <!-- Visitanos -->
                 <div class="card text-dark bg-light col-lg-12">
