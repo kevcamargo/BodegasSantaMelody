@@ -142,13 +142,11 @@ p{
 
 .section__cover__img{
     width: 100%;
-    height: 50%;
     box-shadow: 1px 1px 10px black;
 }
 
 .section__cover__img--marco{
-    width: 100%;
-    height: 50%;
+    width: 80%;
     border: 5px solid #111c10d6;
     box-shadow: 1px 1px 10px black;
 }
@@ -186,9 +184,9 @@ p{
 }
 
 .section__text--subleyenda{
-    padding: 5px 50px;
-    text-align: left;
-    font-size: 1.1rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 .section__article{
@@ -200,18 +198,14 @@ p{
     padding: 15px;
 }
 
-.section__article__foto{
-    text-align: center;
-    padding: 15px 0px;
-}
-
 .section__article__foto__img{
     width: 50%;
     box-shadow: 1px 1px 10px black;
+    margin: 20px 0px;
 }
 
 .section__article__foto__img--mini{
-    width: 80%;
+    width: 100%;
     box-shadow: 1px 1px 10px black;
 }
 
@@ -421,7 +415,7 @@ footer{
         padding: 25px 30px;
         text-align: center;
         letter-spacing: 0.5px;
-        font-size: 1.25rem;
+        font-size: 1.35rem;
         font-weight: 300;
 
         display: flex;
@@ -432,14 +426,14 @@ footer{
     .section__text--centernoflex{
         padding: 15px 30px;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 1rem;
         letter-spacing: 0.5px;
     }
 
     .section__text--centercolumn{
         padding: 15px 30px;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 1rem;
         letter-spacing: 0.5px;
         display: flex;
         flex-flow: column;
@@ -536,14 +530,14 @@ footer{
 
     .section__text--article{
         padding: 5px 20px;
-        font-size: 0.9rem;
+        font-size: 1rem;
         letter-spacing: 0.5px;
     }
 
     .section__text--center{
         padding: 15px 30px;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         letter-spacing: 0.5px;
         display: flex;
         flex-flow: row nowrap;
@@ -554,14 +548,14 @@ footer{
     .section__text--centernoflex{
         padding: 15px 30px;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 1rem;
         letter-spacing: 0.5px;
     }
 
     .section__text--centercolumn{
         padding: 15px 30px;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 1rem;
         letter-spacing: 0.5px;
         display: flex;
         flex-flow: column;
@@ -639,6 +633,12 @@ footer{
 
     .carousel_mobile{
         display: none;
+    }
+
+    .section__text--subleyenda{
+        padding: 0rem;
+        text-align: center;
+        font-size: 1.1rem;
     }
 
     /* FOOTER */
@@ -804,7 +804,7 @@ footer{
 
     .main__titulo{
         font-weight: bolder;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         text-align: center;
         padding: 5px 0px;
         margin-top: 2.5px;
@@ -848,26 +848,26 @@ footer{
 
     .section__text--article{
         padding: 5px 15px;
-        font-size: 0.8rem;
+        font-size: 1rem;
         letter-spacing: 0.5px;
     }
 
     .section__text--center{
         padding: 20px 15px;
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
         letter-spacing: 0.5px;
     }
 
     .section__text--centernoflex{
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .section__text--centercolumn{
         padding: 15px 20px;
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
         letter-spacing: 0.5px;
         display: flex;
         flex-flow: column;
@@ -890,11 +890,6 @@ footer{
 
     .section__article__foto__img{
         width: 100%;
-        box-shadow: 1px 1px 10px black;
-    }
-
-    .section__article__foto__img--mini{
-        width: 70%;
         box-shadow: 1px 1px 10px black;
     }
 
@@ -968,6 +963,12 @@ footer{
     
     .carousel__img--mobile{
         display: flexbox;
+    }
+
+    .section__text--subleyenda{
+        padding: 0rem;
+        text-align: center;
+        font-size: 1rem;
     }
 
     /* FOOTER */
