@@ -1,0 +1,40 @@
+
+
+$fuentePrincipal:'Barlow',sans-serif;
+$colorFondoPrincipal: darkgreen;
+$imgFondoPrincipal: url("../img/pattern4.jpg");
+
+
+/* Corresponde a los parametros del sitio en Grid */
+
+$columnasGrid: repeat(3, 1fr);
+$filasGrid: 100px 1fr 90px;
+$areaGrid:
+"header header header"
+"main main main"
+"footer footer footer";
+
+
+/* Estructura del estilo */
+
+.bodySM{
+    font-family: $fuentePrincipal;
+    background-color: $colorFondoPrincipal;
+    background-image: $imgFondoPrincipal;
+    background-repeat: repeat;
+
+    .contenedorBody{
+        display: grid;
+        grid-template-columns: $columnasGrid;
+        grid-template-rows: $filasGrid;
+        grid-template-areas: $areaGrid;
+        justify-items: stretch;
+    }
+}
+
+.reset{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+
