@@ -1,0 +1,17 @@
+/* Corresponde a los parametros del sitio en Grid */
+/* Estructura del estilo */
+.bodySM {
+  font-family: "Barlow", sans-serif;
+  background-color: darkgreen;
+  background-image: url("../img/pattern4.jpg");
+  background-repeat: repeat; }
+  .bodySM .contenedorBody {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 1fr 90px;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    justify-items: stretch; }
+
+.reset {
+  padding: 0px !important;
+  margin: 0px !important; }
