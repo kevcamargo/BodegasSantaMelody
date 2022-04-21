@@ -1,0 +1,173 @@
+$tamanoAnchoLogo: 200px;
+$tamanoFuenteMobile: 0.8rem;
+$tamanoFuenteTablet: 0.8rem;
+$tamanoFuenteDesktop: 1rem;
+
+$colorTextoHeader: lightgray;
+$sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.800);
+$verde:#6bab66eb;
+$verdeOscuro: rgba(33, 52, 31, 0.99);
+$fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
+
+.headerSM{
+    grid-area: header;
+    color:$colorTextoHeader;
+    padding: 0px;
+    margin-right: 40px;
+    margin-left: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.header__logo{
+    width: $tamanoAnchoLogo;
+    position: relative;
+    top: 10px;
+}
+.header__barraMenu{
+    background: $fondoGradiente;
+    box-shadow: $sombra;
+    flex-grow: 1;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-left: -10px;
+    margin-top: 15px;
+}
+.flechaArriba__button{
+    display: none !important;
+}
+.menuburger{
+    display: none !important;
+}
+.header_logo_img{
+    background-color: black;
+    padding: 20px 20px;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: $sombra;
+    animation-name: latido_logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.barraMenu__lista{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px 10px;
+    margin: 10px;
+    a{
+        color: inherit;
+        text-decoration: none;
+        letter-spacing: 1px;
+        padding: 10px;
+        transition: color 0.5s;
+        &:hover{
+            color:$verde;
+        }
+    }
+    li{
+        font-size: $tamanoFuenteDesktop;
+        font-weight: bolder;
+    }
+}
+.barraMenu__lista--activo{
+    color:$verde;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .header__logo{
+        width: 150px;
+    }
+    .header__barraMenu{
+        padding: 5px;
+        margin-top: 20px;
+    }
+    .barraMenu__lista{
+        padding: 0px;
+        margin-left: 20px;
+        a{
+            letter-spacing: 0px;
+            padding: 4px;
+        }
+        li{
+            font-size: $tamanoFuenteTablet;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .headerSM{
+        padding: 0px;
+        margin-right: 50px;
+        margin-left: 35px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        z-index: 1;
+    }
+    .header__logo{
+        width: 100px;
+        position: fixed;
+        top: 0px;
+        margin: 10px;
+        z-index: 1;
+    }
+    .header__barraMenu{
+        padding: 0px;
+        margin-left: 0px;
+        flex-grow: 0;
+        position: relative;
+        top: 70%;
+        z-index: 0;
+        display: none;
+    }
+    .flechaArriba__button{
+        display: inline !important;
+        position: fixed !important;
+        top: 3%;
+        left: 4.5%;
+        box-shadow: $sombra;
+        color: white !important;
+    }
+    .menuburger{
+        display: inline !important;
+        position: fixed !important;
+        top: 3%;
+        right: 4.5%;
+    }
+    .header_logo_img{
+        padding: 15px 15px;
+        box-shadow: $sombra;
+        margin: -5px 0px;
+        box-sizing: initial;
+        animation-name: latido_logo;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    .menuburger__button{
+        box-shadow: $sombra;
+    }
+    .menuburger__icon{
+        width: 25px;
+        height: 25px;
+    }
+    .menuburger__item{
+        background-color: black !important;
+        opacity: 85%;
+        li{
+            text-align: center !important;
+            font-size: $tamanoFuenteMobile;
+            letter-spacing: 1px;
+        }
+    }
+    .menuburger__item--active{
+        color:$verde;
+        background:$fondoGradiente;
+    }
+}
+
+@keyframes latido_logo{
+    0%   {box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);}
+    50%  {box-shadow: 0px 0px 20px 10px #597e53db;}
+    100% {box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.884);}
+}

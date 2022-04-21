@@ -1,0 +1,115 @@
+$tamanoAnchoLogo: 120px;
+$tamanoAnchoLogoTablet: 100px;
+
+$tamanoAnchoSocials: 35px;
+$tamanoAnchoSocialsTablet: 30px;
+$tamanoAnchoSocialsMobile: 30px;
+
+$tamanoFuenteMobile: 0.8rem;
+$tamanoFuenteTablet: 0.85rem;
+$tamanoFuenteDesktop: 0.9rem;
+
+$colorTextoHeader: lightgray;
+$sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.800);
+$sombraTexto: 0px 0px 2px rgba(16, 32, 18, 0.800);
+$sombraGrande: 0px 0px 15px 10px rgba(0, 0, 0, 0.800);
+$verde:#6bab66eb;
+$verdeOscuro: rgba(33, 52, 31, 0.99);
+$fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
+$verdeFooter1: rgba(84, 121, 80, 0.99);
+$verdeFooter2: rgba(84, 141, 80, 0.99);
+$verdeFooter3: rgba(54, 81, 50, 0.99);
+$fondoGradienteFooter: linear-gradient(180deg, $verdeFooter1, $verdeFooter2 45%, $verdeFooter3);
+
+footer{
+    grid-area: footer;
+    background: $fondoGradienteFooter;
+    margin: 0px 40px;
+    padding: 10px;
+    box-shadow: $sombraGrande;
+    opacity: 90%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__text{
+    font-size: $tamanoFuenteDesktop;
+    font-weight: 500;
+    padding: 0px 30px;
+    text-shadow: $sombraTexto;
+    letter-spacing: 0.04rem;
+    p{
+        margin: 0.5rem 0;
+    }
+}
+.footer__logo{
+    padding: 10px;
+    img{
+        width: $tamanoAnchoLogo;
+        transition: width 0.2s;
+        &:hover{
+            width: 130px;
+        }
+    }
+}
+.footer__redSocial{
+    padding: 0px 30px;
+    img{
+        width: $tamanoAnchoSocials;
+        margin: 5px;
+        border-radius: 10px;
+        transition: box-shadow 0.2s;
+        &:hover{
+            box-shadow: $sombra;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+    .footer__text{
+        font-size: $tamanoFuenteTablet;
+        padding: 0px 10px;
+    }
+    .footer__logo{
+        padding: 5px;
+        img{
+            width: $tamanoAnchoLogoTablet;
+        }
+    }
+    .footer__redSocial{
+        padding: 0px 10px;
+        img{
+            width: $tamanoAnchoSocialsTablet;
+            margin: 2px;
+        }
+    }
+
+}
+
+@media (max-width: 576px){
+    footer{
+        margin: -5px 20px;
+        padding: 5px;
+        flex-direction: column; 
+        justify-content: space-between;
+    }
+    .footer__text{
+        font-size: $tamanoFuenteMobile;
+        text-align: center;
+        padding: 2.5px;
+        p{
+            margin: 0.2rem 0;
+        }
+    }
+    .footer__logo{
+        display: none;
+    }
+    .footer__redSocial{
+        padding: 0px 10px;
+        img{
+            width: $tamanoAnchoSocialsMobile;
+            margin: 5px 5px;
+            padding: 2px;
+        }
+    }
+
+}

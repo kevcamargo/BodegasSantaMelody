@@ -1,0 +1,103 @@
+$tamanoFuenteMobile: 0.8rem;
+$tamanoEncabezadoMobile: 1.0rem;
+$tamanoTitutoMobile: 1.3rem;
+$tamanoFuenteTablet: 0.9rem;
+$tamanoEncabezadoTablet: 1.2rem;
+$tamanoTitutoTablet: 1.5rem;
+$tamanoFuenteDesktop: 1rem;
+$tamanoEncabezadoDesktop: 1.3rem;
+$tamanoTitutoDesktop: 2rem;
+
+$sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.800);
+$sombraGrande: 0px 0px 15px 10px rgba(0, 0, 0, 0.800);
+$fondoMain: rgb(235, 241, 230);
+$verde:#6bab66eb;
+$verdeOscuro: rgba(33, 52, 31, 0.99);
+$fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
+
+
+
+main{
+    grid-area: main;
+    background-color: $fondoMain;
+    margin: 30px 40px;
+    padding-top: 20px;
+    box-shadow: $sombraGrande;
+    p{
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+.main__titulo{
+    font-weight: bolder;
+    font-size: $tamanoTitutoDesktop;
+    text-align: center;
+    padding: 5px 0px;
+    margin-top: 5px;
+}
+.carousel__img--mobile{
+    display: none !important;
+}
+.carousel__leyenda{
+    text-shadow: $sombra;
+}
+.carousel__boton{
+    background: $fondoGradiente;
+    opacity: 80%;
+    box-shadow: $sombra;
+}
+.section__text--center{
+    padding: 25px 30px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: $tamanoEncabezadoDesktop;
+    font-weight: 400;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .main__titulo{
+        font-size: $tamanoTitutoTablet;
+    }
+    .carousel__leyenda{
+        font-size: $tamanoFuenteTablet;
+    }
+    .carousel__boton{
+        font-size: $tamanoFuenteTablet;
+        opacity: 80%;
+    }
+    .section__text--center{
+        padding: 15px 30px;
+        font-size: $tamanoEncabezadoTablet;
+    }
+}
+
+@media (max-width: 576px){
+    main{
+        margin: 40px 20px;
+        z-index: 0;
+    }
+    .main__titulo{
+        font-size: $tamanoTitutoMobile;
+        margin-top: 2px;
+    }
+    .carousel__leyenda{
+        display: none !important;
+    }
+    .carousel__boton{
+        font-size: $tamanoFuenteMobile;
+    }
+    .carousel__img--cover{
+        display: none !important;
+    }
+    .carousel__img--mobile{
+        display: inline-block !important;
+    }
+    .section__text--center{
+        padding: 20px 15px;
+        font-size: $tamanoEncabezadoMobile;
+    }
+}

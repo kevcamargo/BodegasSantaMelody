@@ -1,21 +1,18 @@
-
+@import "header";
+@import "main";
+@import "footer";
 
 $fuentePrincipal:'Barlow',sans-serif;
 $colorFondoPrincipal: darkgreen;
 $imgFondoPrincipal: url("../img/pattern4.jpg");
 
-
-/* Corresponde a los parametros del sitio en Grid */
-
 $columnasGrid: repeat(3, 1fr);
 $filasGrid: 100px 1fr 90px;
+$filasGridMobile: 70px 1fr 90px;
 $areaGrid:
 "header header header"
 "main main main"
 "footer footer footer";
-
-
-/* Estructura del estilo */
 
 .bodySM{
     font-family: $fuentePrincipal;
@@ -37,4 +34,9 @@ $areaGrid:
     margin: 0px !important;
 }
 
+@media (max-width: 576px){
+    .contenedorBody{
+        grid-template-rows: $filasGridMobile;
+    }
+}
 
