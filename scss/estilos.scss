@@ -3,7 +3,7 @@
 @import "footer";
 
 $fuentePrincipal:'Barlow',sans-serif;
-$colorFondoPrincipal: darkgreen;
+$colorFondoPrincipal: #132515;
 $imgFondoPrincipal: url("../img/pattern4.jpg");
 
 $columnasGrid: repeat(3, 1fr);
@@ -36,7 +36,7 @@ $areaGrid:
 
 @media (max-width: 576px){
     .contenedorBody{
-        grid-template-rows: $filasGridMobile;
+        grid-template-rows: $filasGridMobile !important;
     }
 }
 

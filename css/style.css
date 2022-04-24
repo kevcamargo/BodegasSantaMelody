@@ -285,7 +285,7 @@ footer {
 
 .bodySM {
   font-family: "Barlow", sans-serif;
-  background-color: darkgreen;
+  background-color: #132515;
   background-image: url("../img/pattern4.jpg");
   background-repeat: repeat; }
   .bodySM .contenedorBody {
@@ -301,4 +301,4 @@ footer {
 
 @media (max-width: 576px) {
   .contenedorBody {
-    grid-template-rows: 70px 1fr 90px; } }
+    grid-template-rows: 70px 1fr 90px !important; } }
