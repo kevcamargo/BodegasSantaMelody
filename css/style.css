@@ -286,7 +286,7 @@ footer {
 .bodySM {
   font-family: "Barlow", sans-serif;
   background-color: #132515;
-  background-image: url("../img/pattern4.jpg");
+  background-image: url("../img/pattern.jpg");
   background-repeat: repeat; }
   .bodySM .contenedorBody {
     display: grid;
