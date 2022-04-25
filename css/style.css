@@ -22,10 +22,10 @@
   margin-left: -10px;
   margin-top: 15px; }
 
-.flechaArriba__button {
+.header__buttonMobile--flechaArriba {
   display: none !important; }
 
-.menuburger {
+.header__buttonMobile--menuburger {
   display: none !important; }
 
 .header_logo_img {
@@ -42,6 +42,7 @@
   list-style-type: none;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   padding: 5px 10px;
   margin: 10px; }
   .barraMenu__lista a {
@@ -57,7 +58,7 @@
     font-weight: bolder; }
 
 .barraMenu__lista--activo {
-  color: #6bab66eb; }
+  color: green; }
 
 @media (min-width: 576px) and (max-width: 992px) {
   .header__logo {
@@ -72,7 +73,7 @@
       letter-spacing: 0px;
       padding: 4px; }
     .barraMenu__lista li {
-      font-size: 0.8rem; } }
+      font-size: 0.9rem; } }
 
 @media (max-width: 576px) {
   .headerSM {
@@ -81,6 +82,7 @@
     margin-left: 35px;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
     z-index: 1; }
   .header__logo {
     width: 100px;
@@ -96,17 +98,15 @@
     top: 70%;
     z-index: 0;
     display: none; }
-  .flechaArriba__button {
+  .header__buttonMobile, .header__buttonMobile--flechaArriba, .header__buttonMobile--menuburger {
     display: inline !important;
     position: fixed !important;
-    top: 3%;
+    top: 3%; }
+  .header__buttonMobile--flechaArriba {
     left: 4.5%;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.8);
     color: white !important; }
-  .menuburger {
-    display: inline !important;
-    position: fixed !important;
-    top: 3%;
+  .header__buttonMobile--menuburger {
     right: 4.5%; }
   .header_logo_img {
     padding: 15px 15px;
@@ -129,7 +129,7 @@
       font-size: 0.8rem;
       letter-spacing: 1px; }
   .menuburger__item--active {
-    color: #6bab66eb;
+    color: green !important;
     background: linear-gradient(180deg, black 30%, rgba(33, 52, 31, 0.99) 90%); } }
 
 @keyframes latido_logo {
@@ -142,7 +142,7 @@
 
 main {
   grid-area: main;
-  background-color: #ebf1e6;
+  background-color: whitesmoke;
   margin: 30px 40px;
   padding-top: 20px;
   box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.8); }
@@ -173,11 +173,48 @@ main {
   text-align: center;
   letter-spacing: 0.5px;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 300;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center; }
+
+.section__cover__img {
+  width: 100%;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.8); }
+
+.section__titulo__card {
+  background-color: #a4c4a2e6 !important;
+  box-shadow: 0px 0px 10px 3px #a4c4a2e6;
+  border: none !important; }
+
+.section__title {
+  margin-left: 30px; }
+
+.section__text--article {
+  padding: 15px 50px;
+  font-size: 1.3rem;
+  text-align: center; }
+
+.section__article__foto {
+  margin: 0px;
+  text-align: center;
+  padding: 10px 20px; }
+
+.section__article__foto__img {
+  width: 50%;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.8);
+  margin: 20px 0px; }
+
+.section__article__foto__img--mini {
+  width: 90%;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.8); }
+
+.section__text--leyenda {
+  padding: 0px 50px;
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: center; }
 
 @media (min-width: 576px) and (max-width: 992px) {
   .main__titulo {
@@ -189,7 +226,21 @@ main {
     opacity: 80%; }
   .section__text--center {
     padding: 15px 30px;
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+  .section__title {
+    font-size: 1.5rem;
+    margin-left: 10px; }
+  .section__text--article {
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px; }
+  .section__article__foto__img {
+    width: 70%; }
+  .section__article__foto__img--mini {
+    width: 85%; }
+  .section__text--leyenda {
+    font-size: 1.2rem;
+    line-height: 1.4rem; } }
 
 @media (max-width: 576px) {
   main {
@@ -208,7 +259,22 @@ main {
     display: inline-block !important; }
   .section__text--center {
     padding: 20px 15px;
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .section__title {
+    font-size: 1.3rem;
+    margin-left: 5px; }
+  .section__text--article {
+    padding: 5px 5px;
+    font-size: 1rem; }
+  .section__article__foto {
+    padding: 0px 10px; }
+  .section__article__foto__img {
+    width: 100%; }
+  .section__article__foto__img--mini {
+    width: 80%; }
+  .section__text--leyenda {
+    font-size: 1rem;
+    line-height: 1.3rem; } }
 
 footer {
   grid-area: footer;

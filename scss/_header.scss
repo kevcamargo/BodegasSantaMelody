@@ -1,7 +1,9 @@
-$tamanoAnchoLogo: 200px;
-$tamanoFuenteMobile: 0.8rem;
-$tamanoFuenteTablet: 0.8rem;
-$tamanoFuenteDesktop: 1rem;
+$tamanos_header:(
+    width_logo: 200px,
+    font_mobile: 0.8rem,
+    font_tablet: 0.9rem,
+    font_desktop: 1rem
+);
 
 $colorTextoHeader: lightgray;
 $sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.800);
@@ -9,18 +11,24 @@ $verde:#6bab66eb;
 $verdeOscuro: rgba(33, 52, 31, 0.99);
 $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
 
+$esconder: none !important;
+
+@mixin flex($type){
+    display: flex;
+    flex-flow: $type nowrap;
+    align-items: center;
+}
+
 .headerSM{
     grid-area: header;
     color:$colorTextoHeader;
     padding: 0px;
     margin-right: 40px;
     margin-left: 20px;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    @include flex(row);
 }
 .header__logo{
-    width: $tamanoAnchoLogo;
+    width: map-get($tamanos_header,width_logo);
     position: relative;
     top: 10px;
 }
@@ -33,11 +41,11 @@ $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
     margin-left: -10px;
     margin-top: 15px;
 }
-.flechaArriba__button{
-    display: none !important;
+.header__buttonMobile--flechaArriba{
+    display: $esconder;
 }
-.menuburger{
-    display: none !important;
+.header__buttonMobile--menuburger{
+    display: $esconder;
 }
 .header_logo_img{
     background-color: black;
@@ -51,8 +59,7 @@ $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
 }
 .barraMenu__lista{
     list-style-type: none;
-    display: flex;
-    flex-flow: row nowrap;
+    @include flex(row);
     padding: 5px 10px;
     margin: 10px;
     a{
@@ -66,12 +73,12 @@ $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
         }
     }
     li{
-        font-size: $tamanoFuenteDesktop;
+        font-size: map-get($tamanos_header,font_desktop);
         font-weight: bolder;
     }
 }
 .barraMenu__lista--activo{
-    color:$verde;
+    color: green;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -90,7 +97,7 @@ $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
             padding: 4px;
         }
         li{
-            font-size: $tamanoFuenteTablet;
+            font-size: map-get($tamanos_header,font_tablet);
         }
     }
 }
@@ -100,9 +107,7 @@ $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
         padding: 0px;
         margin-right: 50px;
         margin-left: 35px;
-
-        display: flex;
-        flex-flow: column nowrap;
+        @include flex(column);
         z-index: 1;
     }
     .header__logo{
@@ -121,18 +126,19 @@ $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
         z-index: 0;
         display: none;
     }
-    .flechaArriba__button{
+    .header__buttonMobile{
         display: inline !important;
         position: fixed !important;
         top: 3%;
+    }
+    .header__buttonMobile--flechaArriba{
+        @extend .header__buttonMobile;
         left: 4.5%;
         box-shadow: $sombra;
         color: white !important;
     }
-    .menuburger{
-        display: inline !important;
-        position: fixed !important;
-        top: 3%;
+    .header__buttonMobile--menuburger{
+        @extend .header__buttonMobile;
         right: 4.5%;
     }
     .header_logo_img{
@@ -156,12 +162,12 @@ $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
         opacity: 85%;
         li{
             text-align: center !important;
-            font-size: $tamanoFuenteMobile;
+            font-size: map-get($tamanos_header,font_mobile);
             letter-spacing: 1px;
         }
     }
     .menuburger__item--active{
-        color:$verde;
+        color: green !important;
         background:$fondoGradiente;
     }
 }

@@ -2,6 +2,13 @@
 @import "main";
 @import "footer";
 
+@mixin grid($columns,$rows,$areas) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    grid-template-areas: $areaGrid;
+}
+
 $fuentePrincipal:'Barlow',sans-serif;
 $colorFondoPrincipal: #132515;
 $imgFondoPrincipal: url("../img/pattern.jpg");
@@ -14,6 +21,7 @@ $areaGrid:
 "main main main"
 "footer footer footer";
 
+
 .bodySM{
     font-family: $fuentePrincipal;
     background-color: $colorFondoPrincipal;
@@ -21,10 +29,7 @@ $areaGrid:
     background-repeat: repeat;
 
     .contenedorBody{
-        display: grid;
-        grid-template-columns: $columnasGrid;
-        grid-template-rows: $filasGrid;
-        grid-template-areas: $areaGrid;
+        @include grid($columnasGrid,$filasGrid,$areaGrid);
         justify-items: stretch;
     }
 }
