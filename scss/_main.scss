@@ -11,12 +11,15 @@ $tamanos_main:(
 );
 
 $sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.800);
-$sombraCard: 0px 0px 10px 3px #a4c4a2e6;
+$sombraCard: 0px 0px 10px 2px #8cb689e6;
 $sombraGrande: 0px 0px 15px 10px rgba(0, 0, 0, 0.800);
+$sombraTexto: 0px 0px 5px black;
+
 $fondoMain: whitesmoke;
 $fondoTituloCard: #a4c4a2e6 !important;
 $verde:#6bab66eb;
 $verdeOscuro: rgba(33, 52, 31, 0.99);
+
 $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
 
 $esconder: none !important;
@@ -44,7 +47,7 @@ main{
     display: $esconder;
 }
 .carousel__leyenda{
-    text-shadow: $sombra;
+    text-shadow: $sombraTexto;
 }
 .carousel__boton{
     background: $fondoGradiente;
@@ -100,8 +103,32 @@ main{
     font-style: italic;
     text-align: center;
 }
-
-
+.section__text--subleyenda{
+    padding: 0.5rem;
+    text-align: center;
+    font-size: map-get($tamanos_main,encabezado_desktop);
+    font-weight: 400;
+}
+.section__tableGaleria{
+    border: 0px;
+    padding: 40px 40px;
+    text-align: center;
+}
+.section__tableGaleria__img{
+    width: 60%;
+    box-shadow: $sombra;
+    border: 4px double #111c10d6;
+    border-radius: 10px;
+    margin: 5px;
+    transition: box-shadow 0.5s, width 0.5s;
+}
+.section__tableGaleria__img:hover{
+    box-shadow: $sombraCard;
+    width: 70%;
+}
+.carousel__mobile{
+    display: $esconder;
+}
 
 @media (min-width: 576px) and (max-width: 992px) {
     .main__titulo{
@@ -137,6 +164,17 @@ main{
         font-size: map-get($tamanos_main,encabezado_tablet);
         line-height: 1.4rem;
     }
+    .section__text--subleyenda{
+        padding: 0rem !important;
+        font-size: map-get($tamanos_main,encabezado_tablet);
+    }
+    .section__tableGaleria{
+        padding: 20px 20px;
+    }
+    .section__tableGaleria__img{
+        width: 80%;
+        margin: 5px;
+    }
 }
 
 @media (max-width: 576px){
@@ -152,7 +190,8 @@ main{
         display: $esconder;
     }
     .carousel__boton{
-        font-size: map-get($tamanos_main,font_mobile);
+        font-size: map-get($tamanos_main,font_mobile) !important;
+        margin-bottom: -1rem;
     }
     .carousel__img--cover{
         display: $esconder;
@@ -184,5 +223,17 @@ main{
     .section__text--leyenda{
         font-size: map-get($tamanos_main,encabezado_mobile);
         line-height: 1.3rem;
+    }
+    .section__text--subleyenda{
+        font-size: map-get($tamanos_main,encabezado_mobile);
+    }
+    .section__tableGaleria{
+        display: $esconder;
+    }
+    .section__tableGaleria__img{
+        margin: 2px;
+    }
+    .carousel__mobile{
+        display: block !important;
     }
 }

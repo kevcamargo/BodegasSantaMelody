@@ -1,24 +1,32 @@
-$tamanoAnchoLogo: 120px;
-$tamanoAnchoLogoTablet: 100px;
+$tamanos_footer:(
+    logo_desktop: 120px,
+    logo_tablet: 100px,
+    width_socials_desktop: 35px,
+    width_socials_tablet: 30px,
+    width_socials_mobile: 30px,
+    font_desktop: 0.9rem,
+    font_tablet: 0.85rem,
+    font_mobile: 0.8rem
+);
 
-$tamanoAnchoSocials: 35px;
-$tamanoAnchoSocialsTablet: 30px;
-$tamanoAnchoSocialsMobile: 30px;
+@mixin flex($type){
+    display: flex;
+    flex-flow: $type nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
 
-$tamanoFuenteMobile: 0.8rem;
-$tamanoFuenteTablet: 0.85rem;
-$tamanoFuenteDesktop: 0.9rem;
-
-$colorTextoHeader: lightgray;
 $sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.800);
 $sombraTexto: 0px 0px 2px rgba(16, 32, 18, 0.800);
 $sombraGrande: 0px 0px 15px 10px rgba(0, 0, 0, 0.800);
+
 $verde:#6bab66eb;
 $verdeOscuro: rgba(33, 52, 31, 0.99);
-$fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
 $verdeFooter1: rgba(84, 121, 80, 0.99);
 $verdeFooter2: rgba(84, 141, 80, 0.99);
 $verdeFooter3: rgba(54, 81, 50, 0.99);
+
+$fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
 $fondoGradienteFooter: linear-gradient(180deg, $verdeFooter1, $verdeFooter2 45%, $verdeFooter3);
 
 footer{
@@ -28,12 +36,10 @@ footer{
     padding: 10px;
     box-shadow: $sombraGrande;
     opacity: 90%; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(row);
 }
 .footer__text{
-    font-size: $tamanoFuenteDesktop;
+    font-size: map-get($tamanos_footer,font_desktop);
     font-weight: 500;
     padding: 0px 30px;
     text-shadow: $sombraTexto;
@@ -45,7 +51,7 @@ footer{
 .footer__logo{
     padding: 10px;
     img{
-        width: $tamanoAnchoLogo;
+        width: map-get($tamanos_footer,logo_desktop);
         transition: width 0.2s;
         &:hover{
             width: 130px;
@@ -55,7 +61,7 @@ footer{
 .footer__redSocial{
     padding: 0px 30px;
     img{
-        width: $tamanoAnchoSocials;
+        width: map-get($tamanos_footer,width_socials_desktop);
         margin: 5px;
         border-radius: 10px;
         transition: box-shadow 0.2s;
@@ -66,34 +72,32 @@ footer{
 }
 @media (min-width: 576px) and (max-width: 992px) {
     .footer__text{
-        font-size: $tamanoFuenteTablet;
+        font-size: map-get($tamanos_footer,font_tablet);
         padding: 0px 10px;
     }
     .footer__logo{
         padding: 5px;
         img{
-            width: $tamanoAnchoLogoTablet;
+            width: map-get($tamanos_footer,logo_tablet);
         }
     }
     .footer__redSocial{
         padding: 0px 10px;
         img{
-            width: $tamanoAnchoSocialsTablet;
+            width: map-get($tamanos_footer,width_socials_tablet);   
             margin: 2px;
         }
     }
-
 }
 
 @media (max-width: 576px){
     footer{
         margin: -5px 20px;
         padding: 5px;
-        flex-direction: column; 
-        justify-content: space-between;
+        @include flex(column);
     }
     .footer__text{
-        font-size: $tamanoFuenteMobile;
+        font-size: map-get($tamanos_footer,font_mobile);
         text-align: center;
         padding: 2.5px;
         p{
@@ -106,7 +110,7 @@ footer{
     .footer__redSocial{
         padding: 0px 10px;
         img{
-            width: $tamanoAnchoSocialsMobile;
+            width: map-get($tamanos_footer,width_socials_mobile);
             margin: 5px 5px;
             padding: 2px;
         }

@@ -5,19 +5,23 @@ $tamanos_header:(
     font_desktop: 1rem
 );
 
-$colorTextoHeader: lightgray;
-$sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.800);
-$verde:#6bab66eb;
-$verdeOscuro: rgba(33, 52, 31, 0.99);
-$fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
-
-$esconder: none !important;
-
 @mixin flex($type){
     display: flex;
     flex-flow: $type nowrap;
     align-items: center;
 }
+
+$sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.800);
+
+$colorTextoHeader: lightgray;
+$verde:#6bab66eb;
+$verdeOscuro: rgba(33, 52, 31, 0.99);
+
+$fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
+
+$esconder: none !important;
+
+
 
 .headerSM{
     grid-area: header;
