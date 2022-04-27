@@ -23,6 +23,7 @@ $verdeOscuro: rgba(33, 52, 31, 0.99);
 $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
 
 $esconder: none !important;
+$mostrar: block !important;
 
 
 main{
@@ -77,7 +78,6 @@ main{
 .section__title{
     margin-left: 30px;
 }
-
 .section__text--article{
     padding: 15px 50px;
     font-size: map-get($tamanos_main,encabezado_desktop);
@@ -129,6 +129,69 @@ main{
 .carousel__mobile{
     display: $esconder;
 }
+.form__input--text{
+    width: 70%;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid $verde;
+    &:focus{
+        box-shadow: $sombraCard !important;
+        outline: none;
+    }
+}
+.form__input--radio{
+    text-align: center;
+    margin-top: -15px;
+}
+.form__input--radio--mini{
+    display: $esconder;
+}
+.iframe_map{
+    width: 100%;
+    height: 500px;
+    padding: 50px 0px;
+    text-align: center;
+    border: 0px;
+}
+.section__textarea{
+    width: 90%;
+    height: 150px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid $verde;
+    &:focus{
+        box-shadow: $sombraCard !important;
+        outline: none;
+    }
+}
+.section__text--centernoflex{
+    padding: 15px 30px;
+    text-align: center;
+    font-size: map-get($tamanos_main,font_desktop);
+    letter-spacing: 0.5px;
+}
+.form__input--button{
+    background: $fondoGradiente;
+    color: $fondoMain;
+    padding: 10px 20px;
+    margin: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    transition: 0.4s color;
+    &:hover{
+        color: $verde;
+    }
+}
+.main__subtitulo{
+    font-weight: bolder;
+    font-size: map-get($tamanos_main,encabezado_desktop);
+    text-align: center;
+    padding: 5px 0px;
+    margin-top: 5px;
+}
+
 
 @media (min-width: 576px) and (max-width: 992px) {
     .main__titulo{
@@ -175,6 +238,13 @@ main{
         width: 80%;
         margin: 5px;
     }
+    .form__input--text{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .main__subtitulo{
+        font-size: map-get($tamanos_main,encabezado_tablet);
+    }
 }
 
 @media (max-width: 576px){
@@ -197,7 +267,7 @@ main{
         display: $esconder;
     }
     .carousel__img--mobile{
-        display: inline-block !important;
+        display: $mostrar;
     }
     .section__text--center{
         padding: 20px 15px;
@@ -234,6 +304,18 @@ main{
         margin: 2px;
     }
     .carousel__mobile{
-        display: block !important;
+        display: $mostrar;
+    }
+    .form__input--radio{
+        display: $esconder;
+    }
+    .form__input--radio--mini{
+        display: $mostrar;
+    }
+    .section__textarea{ 
+        width: 90%;
+    }
+    .main__subtitulo{
+        font-size: map-get($tamanos_main,encabezado_mobile);
     }
 }

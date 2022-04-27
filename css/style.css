@@ -242,6 +242,65 @@ main {
 .carousel__mobile {
   display: none !important; }
 
+.form__input--text {
+  width: 70%;
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 3px solid #6bab66eb; }
+  .form__input--text:focus {
+    box-shadow: 0px 0px 10px 2px #8cb689e6 !important;
+    outline: none; }
+
+.form__input--radio {
+  text-align: center;
+  margin-top: -15px; }
+
+.form__input--radio--mini {
+  display: none !important; }
+
+.iframe_map {
+  width: 100%;
+  height: 500px;
+  padding: 50px 0px;
+  text-align: center;
+  border: 0px; }
+
+.section__textarea {
+  width: 90%;
+  height: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 3px solid #6bab66eb; }
+  .section__textarea:focus {
+    box-shadow: 0px 0px 10px 2px #8cb689e6 !important;
+    outline: none; }
+
+.section__text--centernoflex {
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.5px; }
+
+.form__input--button {
+  background: linear-gradient(180deg, black 30%, rgba(33, 52, 31, 0.99) 90%);
+  color: whitesmoke;
+  padding: 10px 20px;
+  margin: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  transition: 0.4s color; }
+  .form__input--button:hover {
+    color: #6bab66eb; }
+
+.main__subtitulo {
+  font-weight: bolder;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 5px 0px;
+  margin-top: 5px; }
+
 @media (min-width: 576px) and (max-width: 992px) {
   .main__titulo {
     font-size: 1.5rem; }
@@ -274,7 +333,12 @@ main {
     padding: 20px 20px; }
   .section__tableGaleria__img {
     width: 80%;
-    margin: 5px; } }
+    margin: 5px; }
+  .form__input--text {
+    width: 100%;
+    margin-top: 10px; }
+  .main__subtitulo {
+    font-size: 1.2rem; } }
 
 @media (max-width: 576px) {
   main {
@@ -291,7 +355,7 @@ main {
   .carousel__img--cover {
     display: none !important; }
   .carousel__img--mobile {
-    display: inline-block !important; }
+    display: block !important; }
   .section__text--center {
     padding: 20px 15px;
     font-size: 1rem; }
@@ -317,7 +381,15 @@ main {
   .section__tableGaleria__img {
     margin: 2px; }
   .carousel__mobile {
-    display: block !important; } }
+    display: block !important; }
+  .form__input--radio {
+    display: none !important; }
+  .form__input--radio--mini {
+    display: block !important; }
+  .section__textarea {
+    width: 90%; }
+  .main__subtitulo {
+    font-size: 1rem; } }
 
 footer {
   grid-area: footer;
