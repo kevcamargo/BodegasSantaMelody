@@ -86,9 +86,24 @@
                     </ul> 
                 </nav>
             </div>
+
+            <!-- Boton dark mode -->
+            <button class="btn btn-dark navbar-toggle header__darkmode__button" id="darkmode" onclick="modoOscuro()">
+                <svg xmlns="http://www.w3.org/2000/svg"fill="currentColor" class="bi bi-moon-fill header__darkmode__icon" viewBox="0 0 16 16">
+                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                </svg>
+            </button>
+
+            <!-- Boton light mode -->
+            <button class="btn btn-light navbar-toggle header__darkmode__button none" id="lightmode" onclick="modoClaro()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-brightness-high-fill header__darkmode__icon" viewBox="0 0 16 16">
+                    <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                </svg>
+            </button>
+
         </header>
     
-        <main>
+        <main id="main">
             <!-- Titulo de la pagina -->
             <h1 data-aos="zoom-out" data-aos-duration="800" class="main__titulo">Contacto</h1>
             <img class="section__cover__img" src="../img/cover_contacto3.jpg" alt="cover_contacto">
@@ -178,7 +193,7 @@
                     <p class="section__text--center"><label for="mensaje">Escribe tu duda o consulta:</label></p>
                     
                     <h5 class="col-lg-12 text-center">
-                        <textarea class="section__textarea" name="mensaje" placeholder="Ingrese su mensaje"></textarea>
+                        <textarea id="textarea" class="section__textarea" name="mensaje" placeholder="Ingrese su mensaje"></textarea>
                     </h5>
 
                     <h5 class="section__text--center">
@@ -201,10 +216,9 @@
                         <h3 class="section__title reset">🗺 ¡Visítanos!</h3>
                     </div>
                 </div>
-
                 <article class="section__article border-0">
                     <div class="section__article__foto text-center">
-                        <img data-aos="zoom-in" class="img-fluid w-50" src="../img/logo_santa_melody_black.png" alt="logo_santa_melody_black">
+                        <img data-aos="zoom-in" id="main-logo" class="img-fluid w-50" src="../img/logo_santa_melody_black.png" alt="logo_santa_melody">
                     </div>
                     <h3 class="main__subtitulo">Bodegas Santa Melody</h3>
                     <p class="section__text--leyenda">Ruta Provincial 33, Km 7,5 (M5531) Maipú, Mendoza</p>
@@ -213,7 +227,6 @@
                     <iframe class="iframe_map reset" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.28905478043!2d-68.56890338415758!3d-32.969774880914024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e6ad12ca2130d%3A0xefbcbef017c4b32b!2sBodega%20Santa%20Julia!5e0!3m2!1ses!2sus!4v1647124962211!5m2!1ses!2sus" allowfullscreen="" loading="lazy"></iframe>
     
                 </article>
-    
                 <article class="section__article--sinBorde reset py-3">
                     <!-- Reserva tu visita -->
                     <div class="card text-dark bg-light col-lg-12">
@@ -223,9 +236,7 @@
                     </div>
                     <p class="section__text--leyenda">Nos pueden contactar a través de este mail: </p>
                     <h4 class="main__subtitulo"><a class="text-success" href="mailto:reservas@santamelody.com.ar">reservas@santamelody.com.ar</a></h4>
-    
                 </article>
-    
             </section>
         </main>
     
@@ -248,5 +259,72 @@
 <!--Inicializar AOS -->
 <script>
     AOS.init();
+</script>
+<!--Script para Darkmode y Lightmode-->
+<script>
+    function modoOscuro(){
+        var main = document.getElementById("main");
+        var botonMoon = document.getElementById("darkmode");
+        var botonSun = document.getElementById("lightmode");
+        
+        main.classList.add("main__darkmode");
+        botonMoon.classList.add("none");
+        botonSun.classList.remove("none");
+        
+        var cuerpoCard = document.getElementsByClassName("card-body");
+        var tituloCard = document.getElementsByClassName("section__titulo__card");
+        
+
+        for (let index = 0; index < cuerpoCard.length; index++) {
+            cuerpoCard[index].classList.add("card__darkmode");
+        }
+
+        for (let index = 0; index < tituloCard.length; index++) {
+            tituloCard[index].classList.add("titulo__card__darkmode");
+        }
+
+        var input = document.getElementsByClassName("form__input--text");
+        for (let index = 0; index < input.length ; index++) {
+            input[index].classList.add("input__darkmode");
+        }
+        var textarea = document.getElementById("textarea");
+        textarea.classList.add("input__darkmode");
+
+        var logo = document.getElementById("main-logo");
+        logo.src = "../img/logo_santa_melody2.png";
+
+    }
+    function modoClaro(){
+        var main = document.getElementById("main");
+        var botonMoon = document.getElementById("darkmode");
+        var botonSun = document.getElementById("lightmode");
+        
+        main.classList.remove("main__darkmode");
+        botonMoon.classList.remove("none");
+        botonSun.classList.add("none");
+
+        var cuerpoCard = document.getElementsByClassName("card-body");
+        var tituloCard = document.getElementsByClassName("section__titulo__card");
+
+        for (let index = 0; index < cuerpoCard.length; index++) {
+            cuerpoCard[index].classList.remove("card__darkmode");
+        }
+
+        for (let index = 0; index < tituloCard.length; index++) {
+            tituloCard[index].classList.remove("titulo__card__darkmode");
+        }
+
+        var logo = document.getElementById("main-logo");
+        logo.src = "../img/logo_santa_melody_black.png";
+
+        var input = document.getElementsByClassName("form__input--text");
+
+        for (let index = 0; index < input.length ; index++) {
+            input[index].classList.remove("input__darkmode");
+        }
+
+        var textarea = document.getElementById("textarea");
+        textarea.classList.remove("input__darkmode");
+    }
 </script>
 </html>

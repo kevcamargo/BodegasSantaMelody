@@ -39,6 +39,10 @@ $areaGrid:
     margin: 0px !important;
 }
 
+.none{
+    display: none !important;
+}
+
 @media (max-width: 576px){
     .contenedorBody{
         grid-template-rows: $filasGridMobile !important;

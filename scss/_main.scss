@@ -20,6 +20,10 @@ $fondoTituloCard: #a4c4a2e6 !important;
 $verde:#6bab66eb;
 $verdeOscuro: rgba(33, 52, 31, 0.99);
 
+$DarkMode__fondoMain: #212529;
+$DarkMode__color: white;
+$DarkMode__tituloCard: #29442d; 
+
 $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
 
 $esconder: none !important;
@@ -36,6 +40,7 @@ main{
         margin-top: 1rem !important;
         margin-bottom: 1rem !important;
     }
+    transition: .3s ease all;
 }
 .main__titulo{
     font-weight: bolder;
@@ -191,7 +196,27 @@ main{
     padding: 5px 0px;
     margin-top: 5px;
 }
-
+.main__darkmode{
+    color: $DarkMode__color;
+    background-color: $DarkMode__fondoMain;
+    transition: .3s ease all;
+}
+.card__darkmode{
+    @extend .main__darkmode;
+}
+.titulo__card__darkmode{
+    background-color: $DarkMode__tituloCard !important;
+    box-shadow: $sombra;
+    color: $DarkMode__color;
+}
+.input__darkmode{
+    background-color: $DarkMode__fondoMain;
+    color: $verde;
+}
+.card{
+    border: none !important;
+    background-color: transparent !important;
+}
 
 @media (min-width: 576px) and (max-width: 992px) {
     .main__titulo{

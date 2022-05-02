@@ -21,8 +21,6 @@ $fondoGradiente: linear-gradient(180deg, black 30%, $verdeOscuro 90%);
 
 $esconder: none !important;
 
-
-
 .headerSM{
     grid-area: header;
     color:$colorTextoHeader;
@@ -83,6 +81,18 @@ $esconder: none !important;
 }
 .barraMenu__lista--activo{
     color: green;
+}
+.header__darkmode__icon{
+    width: 2rem;
+    height: 2rem;
+}
+.header__darkmode__button{
+    position: fixed !important;
+    bottom: 5%;
+    right: 4%;
+    z-index: 1;
+    border-radius: 50% !important;
+    padding: 0.8rem .8rem !important;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
